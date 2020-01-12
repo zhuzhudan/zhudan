@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- xmlns：xml的namespace -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/aop
+        https://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <!-- 开启注解扫描，bean-package指定扫描的包路径 -->
+    <context:component-scan base-package="com.study"/>
+
+    <!-- 第三方jar中的bean定义在xml中 -->
+    <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
+        <property name="driverClassName" value="com.mysql.cj.jdbc.Driver"/>
+        <property name="url" value="jdbc:mysql://localhost:3306/bank?useSSL=false"/>
+        <property name="username" value="root"/>
+        <property name="password" value="12345678"/>
+    </bean>
+
+    <bean id="transactionManager" class="com.springframework.jdbc.DataSourceTransactionManager">
+        <constructor-arg name="dataSource" ref="dataSource"/>
+    </bean>
+
+    <!-- 进行aop相关的xml配置 -->
+    <!-- 横切逻辑bean -->
+<!--    <bean id="logUtils" class="com.study.utils.LogUtils"/>-->
+
+    <!-- 使用config标签表明开始aop配置，在内部配置切面aspect -->
+<!--    <aop:config>-->
+<!--        <aop:aspect id="logAspect" ref="logUtils">-->
+<!--            &lt;!&ndash; 切入点锁定感兴趣的方法，使用aspectj语法表达式 &ndash;&gt;-->
+<!--            <aop:pointcut id="pt1" expression="execution(public void com.study.service.impl.TransferServiceImpl.transfer(java.lang.String, java.lang.String, int))"/>-->
+
+<!--            &lt;!&ndash; 方位信息，pointcut-ref关联切入点 &ndash;&gt;-->
+<!--&lt;!&ndash;            <aop:before method="beforeMethod" pointcut-ref="pt1"/>&ndash;&gt;-->
+<!--&lt;!&ndash;            <aop:after method="afterMethod" pointcut-ref="pt1"/>&ndash;&gt;-->
+<!--&lt;!&ndash;            <aop:after-returning method="successMethod" returning="retVal" pointcut-ref="pt1"/>&ndash;&gt;-->
+<!--&lt;!&ndash;            <aop:after-throwing method="exceptionMethod" pointcut-ref="pt1"/>&ndash;&gt;-->
+<!--            <aop:around method="aroundMethod" pointcut-ref="pt1"/>-->
+<!--        </aop:aspect>-->
+<!--    </aop:config>-->
+
+    <!-- 开启aop注解驱动
+         proxy-target-class:true 强制使用cglib -->
+<!--    <aop:aspectj-autoproxy />-->
+</beans>

@@ -19,7 +19,7 @@ public class AfterThrowingAdviceInterceptor extends AbstractAspectAdvice impleme
             return invocation.proceed();
         } catch (Throwable e){
             invokeAdviceMethod(invocation, null, e.getCause());
-            throw e;
+            return null;
         }
 
     }

@@ -2,6 +2,7 @@ package com.springframework.jdbc;
 
 
 import com.alibaba.druid.pool.DruidDataSource;
+import com.springframework.aop.aspect.JoinPoint;
 
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -29,17 +30,30 @@ public class DataSourceTransactionManager {
     }
 
     // 开启手动事务控制
-    public void beginTransaction() throws SQLException {
-        getCurrentThreadConn().setAutoCommit(false);
+    public void beginTransaction(JoinPoint joinPoint) {
+        try {
+            getCurrentThreadConn().setAutoCommit(false);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
     // 提交事务
-    public void commit() throws SQLException {
-        getCurrentThreadConn().commit();
+    public void commit(JoinPoint joinPoint) {
+        try {
+            getCurrentThreadConn().commit();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
     // 回滚事务
-    public void rollback() throws SQLException {
-        getCurrentThreadConn().rollback();
+    public void rollback(JoinPoint joinPoint, Throwable ex)  {
+        try {
+            getCurrentThreadConn().rollback();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        System.err.println("事务中出现异常："+ex.getMessage());
     }
 }

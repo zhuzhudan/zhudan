@@ -286,10 +286,49 @@ public abstract class AbstractApplicationContext implements ApplicationContext {
             }
             Autowired autowired = field.getAnnotation(Autowired.class);
             String autowiredBeanName = autowired.value();
+            Class<?> autowiredClass = null;
+            Class<?> autowiredInterface = null;
             if("".equals(autowiredBeanName)){
-                autowiredBeanName = toLowerCaseFirstOne(field.getName());
+                Class<?> fieldClass = field.getType();
+                if(!fieldClass.isInterface()){
+                    autowiredClass = fieldClass;
+                } else {
+                    autowiredInterface = fieldClass;
+                }
+                int count = 0;
+                for (Map.Entry<String, BeanDefinition> beanDefinitionEntry : this.beanFactory.getBeanDefinitionMap().entrySet()) {
+                    String fieldBeanName = beanDefinitionEntry.getKey();
+                    BeanDefinition fieldBeanDefinition = beanDefinitionEntry.getValue();
+                    String beanClassName = fieldBeanDefinition.getBeanClassName();
+                    if(autowiredClass != null && beanClassName.equals(autowiredClass.getName())){
+                        autowiredBeanName = fieldBeanName;
+                        count++;
+                    }
+                    if(autowiredInterface != null){
+                        Class<?> beanClass = null;
+                        try {
+                            beanClass = Class.forName(beanClassName);
+                            for (Class<?> anInterface : beanClass.getInterfaces()) {
+                                if(anInterface == autowiredInterface){
+                                    autowiredBeanName = fieldBeanName;
+                                    count++;
+                                }
+                            }
+                        } catch (ClassNotFoundException e) {
+                            e.printStackTrace();
+                        }
+
+                    }
+                }
+                if(count > 1){
+                    throw new RuntimeException("有两个类型相同的bean，在注入时请输入名称");
+                }
+
             }
 
+            if(autowiredBeanName.equals("")){
+                int a =0;
+            }
             field.setAccessible(true);
 
             BeanWrapper autowiredBeanWrapper = (BeanWrapper) this.singletonObjects.get(autowiredBeanName);

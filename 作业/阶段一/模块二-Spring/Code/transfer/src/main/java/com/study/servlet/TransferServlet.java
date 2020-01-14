@@ -3,7 +3,6 @@ package com.study.servlet;
 import com.springframework.annotation.Autowired;
 import com.springframework.context.ApplicationContext;
 import com.springframework.context.support.ClassPathXmlApplicationContext;
-import com.study.factory.ProxyFactory;
 import com.study.pojo.Result;
 import com.study.service.TransferService;
 import com.study.utils.JsonUtils;

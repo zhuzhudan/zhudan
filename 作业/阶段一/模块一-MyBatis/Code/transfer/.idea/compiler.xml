@@ -6,8 +6,8 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="transfer" />
         <module name="my-spring-framework" />
+        <module name="transfer" />
       </profile>
     </annotationProcessing>
   </component>

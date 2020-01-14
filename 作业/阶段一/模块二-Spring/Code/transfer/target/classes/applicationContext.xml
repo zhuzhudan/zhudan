@@ -17,11 +17,13 @@
     <!-- 第三方jar中的bean定义在xml中 -->
     <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
         <property name="driverClassName" value="com.mysql.cj.jdbc.Driver"/>
-        <property name="url" value="jdbc:mysql://localhost:3306/bank?useSSL=false"/>
+        <property name="url" value="jdbc:mysql://localhost:3306/bank"/>
         <property name="username" value="root"/>
         <property name="password" value="12345678"/>
     </bean>
-
+    <bean id="jdbcTemplate" class="com.springframework.jdbc.JdbcTemplate">
+        <constructor-arg name="dataSource" ref="dataSource"/>
+    </bean>
     <bean id="transactionManager" class="com.springframework.jdbc.DataSourceTransactionManager">
         <constructor-arg name="dataSource" ref="dataSource"/>
     </bean>

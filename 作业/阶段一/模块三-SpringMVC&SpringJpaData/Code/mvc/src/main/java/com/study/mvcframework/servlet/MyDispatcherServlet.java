@@ -86,6 +86,9 @@ public class MyDispatcherServlet extends HttpServlet {
                     return;
                 }
             }
+        } else if (usernames.isEmpty()){
+            resp.getWriter().write("You do not have permission to access this page");
+            return;
         }
 
         // 遍历request中所有参数（填充除了request，response之外）

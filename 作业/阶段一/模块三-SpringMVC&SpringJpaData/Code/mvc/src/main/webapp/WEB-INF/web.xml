@@ -7,7 +7,7 @@
 
   <servlet>
     <servlet-name>mvc</servlet-name>
-    <servlet-class>com.com.study.mvcframework.servlet.MyDispatcherServlet</servlet-class>
+    <servlet-class>com.study.mvcframework.servlet.MyDispatcherServlet</servlet-class>
     <init-param>
       <param-name>contextConfigLocation</param-name>
       <param-value>springmvc.properties</param-value>

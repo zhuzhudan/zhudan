@@ -1,10 +1,13 @@
-/Users/zhudan/IdeaProjects/zhudan/作业/阶段一/模块三-SpringMVC&SpringJpaData/Code/mvc/src/main/java/com/study/demo/service/IDemoService.java
 /Users/zhudan/IdeaProjects/zhudan/作业/阶段一/模块三-SpringMVC&SpringJpaData/Code/mvc/src/main/java/com/study/mvcframework/annotations/MyService.java
 /Users/zhudan/IdeaProjects/zhudan/作业/阶段一/模块三-SpringMVC&SpringJpaData/Code/mvc/src/main/java/com/study/demo/service/impl/DemoServiceImpl.java
-/Users/zhudan/IdeaProjects/zhudan/作业/阶段一/模块三-SpringMVC&SpringJpaData/Code/mvc/src/main/java/com/study/mvcframework/annotations/Security.java
-/Users/zhudan/IdeaProjects/zhudan/作业/阶段一/模块三-SpringMVC&SpringJpaData/Code/mvc/src/main/java/com/study/mvcframework/annotations/MyController.java
-/Users/zhudan/IdeaProjects/zhudan/作业/阶段一/模块三-SpringMVC&SpringJpaData/Code/mvc/src/main/java/com/study/demo/controller/DemoController.java
 /Users/zhudan/IdeaProjects/zhudan/作业/阶段一/模块三-SpringMVC&SpringJpaData/Code/mvc/src/main/java/com/study/mvcframework/servlet/MyDispatcherServlet.java
 /Users/zhudan/IdeaProjects/zhudan/作业/阶段一/模块三-SpringMVC&SpringJpaData/Code/mvc/src/main/java/com/study/mvcframework/annotations/MyAutowired.java
 /Users/zhudan/IdeaProjects/zhudan/作业/阶段一/模块三-SpringMVC&SpringJpaData/Code/mvc/src/main/java/com/study/mvcframework/pojo/Handler.java
 /Users/zhudan/IdeaProjects/zhudan/作业/阶段一/模块三-SpringMVC&SpringJpaData/Code/mvc/src/main/java/com/study/mvcframework/annotations/MyRequestMapping.java
+/Users/zhudan/IdeaProjects/zhudan/作业/阶段一/模块三-SpringMVC&SpringJpaData/Code/mvc/src/main/java/com/study/demo/service/ISecurityService.java
+/Users/zhudan/IdeaProjects/zhudan/作业/阶段一/模块三-SpringMVC&SpringJpaData/Code/mvc/src/main/java/com/study/demo/service/IDemoService.java
+/Users/zhudan/IdeaProjects/zhudan/作业/阶段一/模块三-SpringMVC&SpringJpaData/Code/mvc/src/main/java/com/study/demo/service/impl/SecurityServiceImpl.java
+/Users/zhudan/IdeaProjects/zhudan/作业/阶段一/模块三-SpringMVC&SpringJpaData/Code/mvc/src/main/java/com/study/mvcframework/annotations/Security.java
+/Users/zhudan/IdeaProjects/zhudan/作业/阶段一/模块三-SpringMVC&SpringJpaData/Code/mvc/src/main/java/com/study/mvcframework/annotations/MyController.java
+/Users/zhudan/IdeaProjects/zhudan/作业/阶段一/模块三-SpringMVC&SpringJpaData/Code/mvc/src/main/java/com/study/demo/controller/DemoController.java
+/Users/zhudan/IdeaProjects/zhudan/作业/阶段一/模块三-SpringMVC&SpringJpaData/Code/mvc/src/main/java/com/study/demo/controller/SecurityController.java

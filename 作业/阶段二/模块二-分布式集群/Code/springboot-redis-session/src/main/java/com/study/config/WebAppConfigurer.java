@@ -1,7 +1,10 @@
 package com.study.config;
 
+import com.study.filter.SessionFilter;
 import com.study.interceptor.AuthorizeInterceptor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.web.servlet.FilterRegistrationBean;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
@@ -18,4 +21,6 @@ public class WebAppConfigurer implements WebMvcConfigurer {
         registry.addInterceptor(authorizeInterceptor).addPathPatterns("/**").
                 excludePathPatterns("/").excludePathPatterns("/login");
     }
+
+
 }

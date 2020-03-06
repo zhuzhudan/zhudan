@@ -22,5 +22,4 @@ public class WebAppConfigurer implements WebMvcConfigurer {
                 excludePathPatterns("/").excludePathPatterns("/login");
     }
 
-
 }

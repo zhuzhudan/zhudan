@@ -1,0 +1,9 @@
+如果要启用注册中心功能：
+
+1、首先需要连接zookeeper，如果非本机zookeeper，可更改zdy_rpc_provider包下的com.study.registry.RegistryCenterWithZK的CONNECTION_STR
+
+2、将com.study.RpcServer中关于注册中心的注释放开，36行、96行
+
+3、连接zookeeper，如果非本机zookeeper，可更改zdy_rpc_consumer包下的com.study.discovery.ServiceDiscoveryWithZK的CONNECTION_STR
+
+4、将com.study.proxy中关于注册服务发现的注释放开，14行、18行；将com.study.handler.RemoteInvocationHandler中关于注册服务发现的注释放开，44行、45行、66行

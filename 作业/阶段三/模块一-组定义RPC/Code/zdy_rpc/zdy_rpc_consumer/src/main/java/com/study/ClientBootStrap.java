@@ -7,5 +7,6 @@ public class ClientBootStrap {
     public static void main(String[] args) {
         UserService userService = RpcProxy.createProxy(UserService.class);
         System.out.println(userService.sayHello("are you ok?"));
+        System.out.println(userService.sayHello("test"));
     }
 }

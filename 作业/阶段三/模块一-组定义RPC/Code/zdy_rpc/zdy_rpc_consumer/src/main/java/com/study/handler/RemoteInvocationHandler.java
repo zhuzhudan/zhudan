@@ -69,7 +69,7 @@ public class RemoteInvocationHandler implements InvocationHandler {
             } catch (Exception e) {
                 e.printStackTrace();
             } finally {
-                group.shutdownGracefully();
+                // group.shutdownGracefully();
             }
             return proxyHandler.getResponse();
         }

@@ -7,21 +7,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ccb2a323-bd10-4775-b384-cc3997a01315" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../../../阶段二/模块二-一致性Session/Code/springboot-session/src/main/java/com/study/WebAppConfigurer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../../阶段二/模块二-一致性Session/Code/springboot-session/src/main/java/com/study/controller/AuthorizeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../../阶段二/模块二-一致性Session/Code/springboot-session/src/main/java/com/study/controller/ResumeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../../阶段二/模块二-一致性Session/Code/springboot-session/src/main/java/com/study/interceptor/AuthorizeInterceptor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../../阶段二/模块二-一致性Session/Code/springboot-session/src/main/java/com/study/pojo/Resume.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../../阶段二/模块二-一致性Session/Code/springboot-session/src/main/java/com/study/respository/ResumeRespository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../../阶段二/模块二-一致性Session/Code/springboot-session/src/main/java/com/study/service/ResumeService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../../阶段二/模块二-一致性Session/Code/springboot-session/src/main/java/com/study/service/impl/ResumeServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../../阶段二/模块二-一致性Session/Code/springboot-session/src/main/resources/static/js/jquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../../阶段二/模块二-一致性Session/Code/springboot-session/src/main/webapp/WEB-INF/jsp/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../../阶段二/模块二-一致性Session/Code/springboot-session/src/main/webapp/WEB-INF/jsp/list.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../../阶段二/模块二-一致性Session/Code/springboot-session/src/main/webapp/WEB-INF/jsp/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-springmvc-springjpa.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/spring-springmvc-springjpa.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../模块一-MyBatis/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../模块一-MyBatis/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../模块一-MyBatis/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../模块一-MyBatis/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../阶段三/模块二-Zookeeper/Code/config_center/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../阶段三/模块二-Zookeeper/Code/config_center/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../阶段三/模块二-Zookeeper/Code/config_center/src/main/java/com/study/client/WriteConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../阶段三/模块二-Zookeeper/Code/config_center/src/main/java/com/study/config/Druid.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../阶段三/模块二-Zookeeper/Code/config_center/src/main/java/com/study/config/DruidConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../阶段三/模块二-Zookeeper/Code/config_center/src/main/java/com/study/config/ZookeeperConfigCenter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../阶段三/模块二-Zookeeper/Code/config_center/src/main/java/com/study/controller/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../阶段三/模块二-Zookeeper/Code/config_center/src/main/java/com/study/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../阶段三/模块二-Zookeeper/Code/config_center/src/main/java/com/study/controller/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../阶段三/模块二-Zookeeper/Code/zdy_rpc/zdy_rpc_consumer/src/main/java/com/study/netty/NettyClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../阶段三/模块二-Zookeeper/Code/zdy_rpc/zdy_rpc_provider2/src/main/java/com/study/RpcServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../阶段三/模块二-Zookeeper/Code/zdy_rpc/zdy_rpc_provider2/src/main/java/com/study/config/SpringConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../阶段三/模块二-Zookeeper/Code/zdy_rpc/zdy_rpc_provider2/src/main/java/com/study/handler/ProcessorHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../阶段三/模块二-Zookeeper/Code/zdy_rpc/zdy_rpc_provider2/src/main/java/com/study/registry/RegistryCenter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../阶段三/模块二-Zookeeper/Code/zdy_rpc/zdy_rpc_provider2/src/main/java/com/study/registry/RegistryCenterWithZK.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../阶段三/模块二-Zookeeper/Code/zdy_rpc/zdy_rpc_provider2/src/main/java/com/study/service/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../阶段三/模块一-组定义RPC/Code/zdy_rpc/zdy_rpc_consumer/src/main/java/com/study/ClientBootStrap.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../阶段三/模块一-组定义RPC/Code/zdy_rpc/zdy_rpc_consumer/src/main/java/com/study/ClientBootStrap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../阶段三/模块一-组定义RPC/Code/zdy_rpc/zdy_rpc_consumer/src/main/java/com/study/handler/RemoteInvocationHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../阶段三/模块一-组定义RPC/Code/zdy_rpc/zdy_rpc_consumer/src/main/java/com/study/handler/RemoteInvocationHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../阶段三/模块一-组定义RPC/Code/zdy_rpc/zdy_rpc_consumer/target/classes/com/study/ClientBootStrap.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../阶段三/模块一-组定义RPC/Code/zdy_rpc/zdy_rpc_consumer/target/classes/com/study/ClientBootStrap.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../阶段三/模块一-组定义RPC/Code/zdy_rpc/zdy_rpc_consumer/target/classes/com/study/handler/RemoteInvocationHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../阶段三/模块一-组定义RPC/Code/zdy_rpc/zdy_rpc_consumer/target/classes/com/study/handler/RemoteInvocationHandler.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -159,6 +168,7 @@
       <workItem from="1583149143647" duration="6710000" />
       <workItem from="1583158282143" duration="152000" />
       <workItem from="1583158846283" duration="897000" />
+      <workItem from="1585752613320" duration="15000" />
     </task>
     <servers />
   </component>

@@ -1,0 +1,20 @@
+#eureka server服务端口
+server:
+  port: 8762
+
+spring:
+  application:
+    name: cloud-eureka-server #应用名称，会在eureka中作为服务名称
+
+#eureka客户端配置（和Server交互）eureka server其实也是一个client
+eureka:
+  instance:
+    hostname: CloudEurekaServerB #当前eureka示例的主机名
+
+  client:
+    service-url:
+      #配置客户端所交互的eureka server的地址
+      #集群模式下，defaultZone应该指向其他Eureka Server，如果有多个Eureka Server用"，"隔开
+      defaultZone: http://CloudEurekaServerA:8761/eureka
+    register-with-eureka: true #当前自己就是server，不需要注册自己，集群模式下true
+    fetch-registry: true #查询获取注册中心的服务信息，自己就是server，不需要从eureka server获取服务信息，默认或集群模式下为true

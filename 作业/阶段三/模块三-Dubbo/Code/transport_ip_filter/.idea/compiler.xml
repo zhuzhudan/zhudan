@@ -6,10 +6,10 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="service_provider2" />
-        <module name="web_consumer" />
-        <module name="service_api" />
         <module name="transport_filter" />
+        <module name="service_provider2" />
+        <module name="service_api" />
+        <module name="web_consumer" />
         <module name="service_provider" />
       </profile>
     </annotationProcessing>

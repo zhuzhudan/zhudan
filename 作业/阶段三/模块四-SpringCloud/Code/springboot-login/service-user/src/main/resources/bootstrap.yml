@@ -1,0 +1,30 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: service-user
+  datasource:
+    url: jdbc:mysql://localhost:3306/spring_cloud?characterEncoding=utf8
+    username: root
+    password: 12345678
+  cloud:
+    config:
+      name: service-user
+      profile: dev
+      label: master
+      uri: http://localhost:9006
+# 注册到Eureka服务中心
+eureka:
+  client:
+    service-url:
+      # 注册到集群，就把多个Eureka Server地址使用都好连接起来即可；注册单实例，写一个就行
+      defaultZone: http://CloudEurekaServerA:8761/eureka,http://CloudEurekaServerB:8762/eureka
+  instance:
+    prefer-ip-address: true #服务实例中显示ip，而不是显示主机名
+    instance-id: ${spring.cloud.client.ip-address}:${spring.application.name}:${server.port}:@project.version@
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

@@ -1,0 +1,42 @@
+server:
+  port: 9002
+eureka:
+  client:
+    service-url:
+      defaultZone: http://CloudEurekaServerA:8761/eureka/,http://CloudEurekaServerB:8762/eureka/
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ip-address}:${spring.application.name}:${server.port}:@project.version@
+spring:
+  application:
+  name: cloud-gateway
+  cloud:
+    gateway:
+      routes: # 路由可以有多个
+        - id: service-code-router # 我们⾃定义的路由 ID，保持唯⼀
+          uri: lb://service-code
+          predicates: # 断⾔：路由条件，Predicate 接受⼀个输⼊参数，返回⼀个布尔值结果。该接⼝包含多种默 认⽅法来将Predicate 组合成其他复杂的逻辑（⽐如：与，或，⾮）。
+            - Path=/api/code/**
+        - id: service-email-router # 我们⾃定义的路由 ID，保持唯⼀
+          uri: lb://service-email
+          predicates: # 断⾔：路由条件，Predicate 接受⼀个输⼊参数，返回⼀个布尔值结果。该接⼝包含多种默 认⽅法来将Predicate 组合成其他复杂的逻辑（⽐如：与，或，⾮）。
+            - Path=/api/email/**
+        - id: service-user-router # 我们⾃定义的路由 ID，保持唯⼀
+          uri: lb://service-user
+          predicates: # 断⾔：路由条件，Predicate 接受⼀个输⼊参数，返回⼀个布尔值结果。该接⼝包含多种默 认⽅法来将Predicate 组合成其他复杂的逻辑（⽐如：与，或，⾮）。
+            - Path=/api/user/**
+    config:
+      name: cloud-gateway
+      profile: dev
+      label: master
+      uri: http://localhost:9006
+
+ipfilter:
+  time: 1
+  count: 3
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

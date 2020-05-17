@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="cloud-configserver" />
+        <module name="service-user" />
+        <module name="eureka-server-8762" />
+        <module name="eureka-server-8761" />
+        <module name="service-common" />
+        <module name="service-code" />
+        <module name="service-email" />
+        <module name="cloud-gateway" />
+        <module name="login" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="cloud-configserver" options="-parameters" />
+      <module name="cloud-gateway" options="-parameters" />
+      <module name="eureka-server-8761" options="-parameters" />
+      <module name="eureka-server-8762" options="-parameters" />
+      <module name="login" options="-parameters" />
+      <module name="service-code" options="-parameters" />
+      <module name="service-common" options="-parameters" />
+      <module name="service-email" options="-parameters" />
+      <module name="service-user" options="-parameters" />
+    </option>
+  </component>
+</project>

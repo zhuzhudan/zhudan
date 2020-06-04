@@ -7,12 +7,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="cloud-configserver" />
-        <module name="service-user" />
         <module name="eureka-server-8762" />
         <module name="eureka-server-8761" />
         <module name="service-common" />
         <module name="service-code" />
         <module name="service-email" />
+        <module name="service-user" />
         <module name="cloud-gateway" />
         <module name="login" />
       </profile>

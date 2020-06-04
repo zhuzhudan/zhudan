@@ -1,0 +1,49 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: service-code
+  datasource:
+    url: jdbc:mysql://localhost:3306/spring_cloud?characterEncoding=utf8
+    username: root
+    password: 12345678
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+      config:
+        server-addr: 127.0.0.1:8848
+        namespace: public
+        file-extension: yaml
+  main:
+    allow-bean-definition-overriding: true
+service-email:
+  ribbon:
+    #请求连接超时时间
+    ConnectTimeout: 300000
+    #请求处理超时时间
+    ReadTimeout: 300000
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+dubbo:
+  scan:
+    # dubbo 服务扫描基准包
+    base-packages: com.study.service.impl
+  protocol:
+    # dubbo 协议
+    name: dubbo
+    # dubbo 协议端口（ -1 表示自增端口，从 20880 开始）
+    port: -1
+    host: 127.0.0.1
+  registry:
+    # 挂载到 Spring Cloud 的注册中心
+    address: spring-cloud://localhost
+  cloud:
+    # 订阅服务提供方的应用列表，订阅多个服务提供者使用 "," 连接
+    subscribed-services: service-email,service-code

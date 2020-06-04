@@ -5,3 +5,5 @@
 请下载“模块三-Dubbo.zip”，“模块三-Dubbo.zip"只是将“模块三-Dubbo”文件夹进行打包，便于下载
 
 请下载“模块四-SpringCloud.zip”，“模块四-SpringCloud.zip"只是将“模块四-SpringCloud”文件夹进行打包，便于下载
+
+请下载“模块五-SpringCloudAlibaba.zip”，“模块五-SpringCloudAlibaba.zip"只是将“模块五-SpringCloudAlibaba”文件夹进行打包，便于下载

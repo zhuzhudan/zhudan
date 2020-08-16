@@ -7,11 +7,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="service-user" />
-        <module name="service-dubbo-api" />
         <module name="cloud-gateway" />
-        <module name="service-common" />
         <module name="service-code" />
+        <module name="service-common" />
         <module name="service-email" />
+        <module name="service-dubbo-api" />
       </profile>
     </annotationProcessing>
   </component>
